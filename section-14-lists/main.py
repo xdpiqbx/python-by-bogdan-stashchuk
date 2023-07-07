@@ -4,6 +4,8 @@ fruits2 = ["apple", "banana", "lime"]
 
 ids = [1, 2, 3, 4, 5]
 
+print(ids.__getitem__(0))  # sane as -> ids[0]
+
 # -------------------------------------- Methods
 # print(dir(list))
 # .append('item')
