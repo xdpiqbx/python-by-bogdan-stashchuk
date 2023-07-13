@@ -30,8 +30,8 @@ print(dir(calc))
 # ------------------------------------ __main__, __name__
 # calc.py calc
 # calc.py False - because calc imported
-print("main.py", __name__)  # main.py __main__
-print("main.py", __name__ == '__main__')  # main.py True
+print("module_array.py", __name__)  # module_array.py __main__
+print("module_array.py", __name__ == '__main__')  # module_array.py True
 
 # ------------------------------------ built-in modules
 help('modules')
