@@ -23,9 +23,9 @@ print(calc.mult_nums(5, 4))
 print(calc.PI)
 
 print(dir(calc))
-['PI', '__builtins__', '__cached__', '__doc__', '__file__',
- '__loader__', '__name__', '__package__', '__spec__',
- 'dif_nums', 'div_mod_nums', 'div_nums', 'mult_nums', 'sum_nums']
+var = ['PI', '__builtins__', '__cached__', '__doc__', '__file__',
+       '__loader__', '__name__', '__package__', '__spec__',
+       'dif_nums', 'div_mod_nums', 'div_nums', 'mult_nums', 'sum_nums']
 
 # ------------------------------------ __main__, __name__
 # calc.py calc
