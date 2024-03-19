@@ -108,6 +108,17 @@ prog_langs = ["Python", "Java", "Go", "C++", "SQL"]
 # dict_table = str.maketrans({"a": "cat", "b": "dog", "c": "snake"})  # string keys in translate table must be of length 1
 # print("a b c b a".translate(dict_table))
 
+# ---------- isalpha
+print("thestring".isalpha())  # True if str ONLY! with letters
+print("Hello".isascii())  # True ASCII in range U+0000-U+007F
+print("😀".isascii())  # False Symbols: ©, ®, €, £, µ, ¥, etc, Emoji: 😀, 🌍, 🎉, 👋, etc.
+print("The_String".isidentifier())  # contains alphanumeric letters (a-z) and (0-9), or underscores (_)
+print("The4String9".isalnum())  # True if all the characters are alphanumeric
+print("8943765²\u0030".isdigit())  # True if all the characters are numeric. string with all digits
+print("2155¾²\u0030\u2174ⅯⅭⅯⅬⅩⅩ".isnumeric())  # True if all the characters, unicod are numeric
+print("124645".isdecimal())  # True if all characters in the string are decimal
+
+
 # ---------- 'format'
 # https://docs.python.org/3/library/stdtypes.html#str.format
 # https://docs.python.org/3/library/string.html#format-examples
@@ -122,17 +133,9 @@ prog_langs = ["Python", "Java", "Go", "C++", "SQL"]
 # point = {'x': 4, 'y': -5}
 # print('{x} {y}'.format_map(point))
 
-#   'isalpha',
-#   'isascii',
-#   'isidentifier',
-#   'isalnum',
-#   'isnumeric',
-#   'isdigit',
-#   'isdecimal',
-#
 #   'isprintable',
 #   'isspace'
-#   ,
+#
 #   'istitle',
 #   'isupper'
 #   'islower',

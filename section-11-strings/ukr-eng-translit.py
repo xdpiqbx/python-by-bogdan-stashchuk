@@ -20,24 +20,28 @@ cyrillic_to_latin_small_dict = {
     'Ш': 'Sh', 'Щ': 'Shch', 'Ю': 'Iu', 'Я': 'Ia'
 }
 
+def translit_from_ukr_to_eng(delimiter=" ", text_to_translit=""):
+    temp_words_list = text_to_translit.split(delimiter)
+
+    # Step 0: translit "зг" to "zgh" for all words
+    temp_words_list = [word.replace("зг", "zgh") for word in temp_words_list]
+    temp_words_list = [word.replace("Зг", "Zgh") for word in temp_words_list]
+
+    # Step 1: translit exception first letter for all words
+    temp_words_list = [
+        word[0].translate(
+            str.maketrans(cyrillic_to_latin_first_letter_exceptions)
+        ) + word[1:len(word)] for word in temp_words_list
+    ]
+
+    # Step 2: translit everything else
+    temp_words_list = [
+        word.translate(
+            str.maketrans(cyrillic_to_latin_small_dict)
+        ) for word in temp_words_list
+    ]
+
+    return " ".join(temp_words_list)
+
 cyrillic_text = "Привіт друже, як ти? Їси яблука? А для мене в Юлі ще є? Згодом наберу."
-
-temp_words_list = cyrillic_text.split(" ")
-temp_words_list = [word.replace("зг", "zgh") for word in temp_words_list]
-temp_words_list = [word.replace("Зг", "Zgh") for word in temp_words_list]
-
-temp_words_list = [
-    word[0].translate(
-        str.maketrans(cyrillic_to_latin_first_letter_exceptions)
-    ) + word[1:len(word)] for word in temp_words_list
-]
-
-temp_words_list = [
-    word.translate(
-        str.maketrans(cyrillic_to_latin_small_dict)
-    ) for word in temp_words_list
-]
-
-transliterated = " ".join(temp_words_list)
-
-print(transliterated)
+print(translit_from_ukr_to_eng(text_to_translit=cyrillic_text))
