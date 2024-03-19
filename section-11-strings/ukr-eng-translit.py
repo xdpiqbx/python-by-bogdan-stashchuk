@@ -2,7 +2,7 @@
 # Якщо літера на початку Є -> Ye, Ї -> Yi, Ю -> Yu, Я -> Ya
 # В усіх випадках зг -> zgh
 
-cyrillic_to_latin_first_letter_exceptions = {
+cyrillic_to_latin_first_letter = {
     "є": 'ye', 'ї': 'yi', 'ю': 'yu', 'я': 'ya',
     "Є": 'Ye', 'Ї': 'Yi', 'Ю': 'Yu', 'Я': 'Ya'
 }
@@ -30,7 +30,7 @@ def translit_from_ukr_to_eng(delimiter=" ", text_to_translit=""):
     # Step 1: translit exception first letter for all words
     temp_words_list = [
         word[0].translate(
-            str.maketrans(cyrillic_to_latin_first_letter_exceptions)
+            str.maketrans(cyrillic_to_latin_first_letter)
         ) + word[1:len(word)] for word in temp_words_list
     ]
 
