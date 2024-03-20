@@ -126,19 +126,19 @@ prog_langs = ["Python", "Java", "Go", "C++", "SQL"]
 # print("H\tello\n".isprintable())  # False
 # print([letter.isprintable() for letter in [*"H \n ello\n"]])
 
-
 # ---------- 'format'
 # https://docs.python.org/3/library/stdtypes.html#str.format
-# https://docs.python.org/3/library/string.html#format-examples
 # print('Results of the {} {}'.format(2016, 'Referendum'))
 # print('Results of the {0} {1}'.format(2016, 'Referendum'))
 # print('Results of the {year} {event}'.format(year=2016, event='Referendum'))
 # point = {'x': 4, 'y': -5}
 # print('{x} {y}'.format(**point))
 
+# --- what about {}
+# https://docs.python.org/3/library/string.html#format-string-syntax
+# https://docs.python.org/3/library/string.html#format-examples
+
 # ---------- 'format_map'
 # https://docs.python.org/3/library/stdtypes.html#str.format_map
 # point = {'x': 4, 'y': -5}
 # print('{x} {y}'.format_map(point))
-
-
