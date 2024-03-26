@@ -84,60 +84,84 @@ print(float_num + int_num)  # 9.5 float_num.__add__(int_num)
 #   'StopAsyncIteration', 'StopIteration',
 #   '__build_class__', '__debug__', '__doc__', '__import__', '__loader__', '__name__', '__package__', '__spec__',
 
+#   'str',
+#   'int',
+#   'float',
 #   'bool',
-#   'chr',
+#   'dict',
+#   'list',
+#   'set',
+#   'frozenset',
+#   'tuple',
+#   'map',
+#   'complex'  # complex(3, 5), complex('3+5j')
 
-#   'abs',
-#   'aiter',
-#   'all',
-#   'anext',
-#   'any',
-#   'bin',
+#   ord('*')  # 42
+#   chr(42)  # function returns the character that represents the specified unicode
+#   bin(42)  # function returns the binary version of a specified integer
+
+#   abs(-42)  # Return the absolute value of a number
+
+#   any(any_true_in_list)  # Check if any of the items in a list are True
+#   all(all_true_list)  # Check if all items in a list are True
+
+#   'getattr',
+#   'setattr',
+#   'hasattr',
+#   'delattr',
+
+#   'input',
+
+# ----- 'iter' & 'next',
+# vowels = ["a", "e", "i", "o", "u"]
+# vowels_iter = iter(vowels)
+# print(next(vowels_iter))  # a
+# print(next(vowels_iter))  # e
+# print(next(vowels_iter))  # i
+# print(next(vowels_iter))  # o
+# print(next(vowels_iter))  # u
+# print(next(vowels_iter))  # Traceback (most recent call last): StopIteration
+
+# ----- 'aiter' & 'anext',
+# https://docs.python.org/3/glossary.html#term-asynchronous-iterator
+# https://docs.python.org/3/glossary.html#term-asynchronous-iterable
+# https://docs.python.org/3/reference/expressions.html#await
+# https://docs.python.org/3/reference/compound_stmts.html#coroutines
+
+#   'sum',
+#   'divmod',
+#   'max',
+#   'min',
+#   'pow',
+
+#   'oct'  # The oct() returns an octal string from the given 'int' (binary, decimal or hexadecimal) number.
+#   'hex'  # converts an 'int' to the hexadecimal number in string form
+
 #   'breakpoint',
 #   'bytearray',
 #   'callable',
 #   'classmethod',
 #   'compile',
-#   'complex',
 #   'copyright',
 #   'credits',
-#   'delattr',
-#   'dict',
 #   'dir',
-#   'divmod',
 #   'enumerate',
 #   'eval',
 #   'exec',
 #   'filter',
-#   'float',
 #   'format',
-#   'frozenset',
-#   'getattr',
 #   'globals',
-#   'hasattr',
 #   'hash',
 #   'help',
-#   'hex',
 #   'id',
-#   'input',
-#   'int',
 #   'isinstance',
 #   'issubclass',
-#   'iter',
 #   'len',
 #   'license',
-#   'list',
 #   'locals',
-#   'map',
-#   'max',
 #   'memoryview',
-#   'min',
-#   'next',
 #   'object',
-#   'oct',
 #   'open',
-#   'ord',
-#   'pow',
 #   'print',
 #   'property',
 #   'quit',
@@ -145,15 +169,10 @@ print(float_num + int_num)  # 9.5 float_num.__add__(int_num)
 #   'repr',
 #   'reversed',
 #   'round',
-#   'set',
-#   'setattr',
 #   'slice',
 #   'sorted',
 #   'staticmethod',
-#   'str',
-#   'sum',
 #   'super',
-#   'tuple',
 #   'type',
 #   'vars',
 #   'zip'
