@@ -18,10 +18,10 @@
 int_num = 5
 float_num = 4.5
 
-print(True + int_num)  # 6
-print(int_num + True)  # 6 -> int_num.__add__(True)
-print(int_num + float_num)  # 9.5 "NotImplemented" but python do this -> float_num.__radd__(int_num)
-print(float_num + int_num)  # 9.5 float_num.__add__(int_num)
+# print(True + int_num)  # 6
+# print(int_num + True)  # 6 -> int_num.__add__(True)
+# print(int_num + float_num)  # 9.5 "NotImplemented" but python do this -> float_num.__radd__(int_num)
+# print(float_num + int_num)  # 9.5 float_num.__add__(int_num)
 
 # print(dir(__builtins__))
 # https://docs.python.org/3/library/functions.html
@@ -84,6 +84,15 @@ print(float_num + int_num)  # 9.5 float_num.__add__(int_num)
 #   'StopAsyncIteration', 'StopIteration',
 #   '__build_class__', '__debug__', '__doc__', '__import__', '__loader__', '__name__', '__package__', '__spec__',
 
+# ----- SERVICE functions
+#   'dir',
+#   'help',
+#   'copyright',
+#   'credits',
+#   'license',
+
+#   'type' return  type of an object in Python
+
 #   'str',
 #   'int',
 #   'float',
@@ -96,6 +105,11 @@ print(float_num + int_num)  # 9.5 float_num.__add__(int_num)
 #   'map',
 #   'complex'  # complex(3, 5), complex('3+5j')
 
+#   'id'  # returns a unique id (the object's memory address) for the specified object
+#   'hash'  # returns an integer value for every object which is hashable (is used to quickly compare dictionary keys)
+
+#   'range'  # range(start, stop, step)
+
 #   ord('*')  # 42
 #   chr(42)  # function returns the character that represents the specified unicode
 #   bin(42)  # function returns the binary version of a specified integer
@@ -105,12 +119,7 @@ print(float_num + int_num)  # 9.5 float_num.__add__(int_num)
 #   any(any_true_in_list)  # Check if any of the items in a list are True
 #   all(all_true_list)  # Check if all items in a list are True
 
-#   'getattr',
-#   'setattr',
-#   'hasattr',
-#   'delattr',
-
-#   'input',
+#   'print' & 'input',
 
 # ----- 'iter' & 'next',
 # vowels = ["a", "e", "i", "o", "u"]
@@ -128,53 +137,42 @@ print(float_num + int_num)  # 9.5 float_num.__add__(int_num)
 # https://docs.python.org/3/reference/expressions.html#await
 # https://docs.python.org/3/reference/compound_stmts.html#coroutines
 
-#   'sum',
-#   'divmod',
-#   'max',
-#   'min',
-#   'pow',
-#   'round',
+#   'sum', 'divmod', 'max', 'min', 'pow', 'round',
 
 #   'oct'  # The oct() returns an octal string from the given 'int' (binary, decimal or hexadecimal) number.
 #   'hex'  # converts an 'int' to the hexadecimal number in string form
 
-#   'copyright',
-#   'credits',
+#   'object'  # create empty object
 
-#   'breakpoint',
+#   'getattr', 'setattr', 'hasattr', 'delattr'
+
+#   'classmethod'  # class_name.method = classmethod(class_name.method); or with @classmethod
+#   'staticmethod'  # Calc.add_numbers = staticmethod(Calc.add_numbers); or with @staticmethod
+#   'property',  # property(fget, fset, fdel, doc)
+#   'isinstance'  # returns True if the specified object is of the specified type - isinstance(object, type)
+#   'issubclass'  # returns True if the specified object is a subclass of the specified object - issubclass(object, subclass)
+
+#   'globals'  # returns a dictionary representing the current global symbol table
+#   'locals',  # returns the dictionary of the current local symbol table
+
 #   'bytearray',
 #   'callable',
-#   'classmethod',
+#   'breakpoint',
 #   'compile',
-#   'dir',
 #   'enumerate',
 #   'eval',
 #   'exec',
-#   'filter',
 #   'format',
-#   'globals',
-#   'hash',
-#   'help',
-#   'id',
-#   'isinstance',
-#   'issubclass',
+#   'filter',
 #   'len',
-#   'license',
-#   'locals',
 #   'memoryview',
-#   'object',
 #   'open',
-#   'print',
-#   'property',
-#   'quit',
-#   'range',
 #   'repr',
 #   'reversed',
 #   'slice',
 #   'sorted',
-#   'staticmethod',
 #   'super',
-#   'type',
 #   'vars',
 #   'zip'
+#   'quit',
 # ]
