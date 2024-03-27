@@ -133,17 +133,19 @@ print(float_num + int_num)  # 9.5 float_num.__add__(int_num)
 #   'max',
 #   'min',
 #   'pow',
+#   'round',
 
 #   'oct'  # The oct() returns an octal string from the given 'int' (binary, decimal or hexadecimal) number.
 #   'hex'  # converts an 'int' to the hexadecimal number in string form
+
+#   'copyright',
+#   'credits',
 
 #   'breakpoint',
 #   'bytearray',
 #   'callable',
 #   'classmethod',
 #   'compile',
-#   'copyright',
-#   'credits',
 #   'dir',
 #   'enumerate',
 #   'eval',
@@ -168,7 +170,6 @@ print(float_num + int_num)  # 9.5 float_num.__add__(int_num)
 #   'range',
 #   'repr',
 #   'reversed',
-#   'round',
 #   'slice',
 #   'sorted',
 #   'staticmethod',
