@@ -16,8 +16,8 @@
 # print(5 + "5")  # TypeError: unsupported operand type(s) for +: 'int' and 'str'
 # print("5" + 5)  # TypeError: can only concatenate str (not "int") to str
 
-int_num = 5
-float_num = 4.5
+# int_num = 5
+# float_num = 4.5
 
 # print(True + int_num)  # 6
 # print(int_num + True)  # 6 -> int_num.__add__(True)
@@ -223,27 +223,50 @@ float_num = 4.5
 #   'len'  # len(some_list or string) function returns the number of items in an object.
 
 # ----- 'quit' - should not be used in production code!
-# It raises the SystemExit exception behind the scenes
-for i in range(10):
-    if i == 5:
-        print(quit)  # ---- quit
-        quit()
-    print(i)
+#       It raises the SystemExit exception behind the scenes
+# for i in range(10):
+#     if i == 5:
+#         print(quit)  # ---- quit
+#         quit()
+#     print(i)
 
 
-# ----- 'exit' -
-for i in range(10):
-    if i == 5:
-        print(exit)  # ---- exit
-        exit()
-    print(i)
+# ----- 'exit' - should not be used in production code!
+# for i in range(10):
+#     if i == 5:
+#         print(exit)  # ---- exit
+#         exit()
+#     print(i)
 
 # ----- sys.exit([arg])  # arg - int or string
 # is considered as exit commands in python if good to be used in production code
 
+# ----- 'filter'  # filter(boolean_function | None, iterable)
+# numbers = [1, 2, 3, 4, 5, 6, 7]
+# even_numbers_iterator = filter(lambda x: (x % 2 == 0), numbers)
+# even_numbers = list(even_numbers_iterator)
+# print(even_numbers)
+
+# ----- 'reversed'  # returns a reversed copy of iterator object
+# letters = ['a', 'b', 'c', 'd', 'e', 'f']
+# print(list(reversed(letters)))
+# print(letters)
+
+# ----- 'sorted'  # sorted(iterable, key=key, reverse=reverse)
+#     iterable - Required. The sequence to sort, list, dictionary, tuple etc.
+#     key - Optional. A Function to execute to decide the order. Default is None
+#     reverse - Optional. A Boolean. False will sort ascending, True will sort descending. Default is False
+# letters = ("h", "b", "a", "c", "f", "d", "e", "g")
+# sorted_letters = sorted(letters, reverse=True)
+# print(sorted_letters)
+
+# ----- 'zip'  # zip(iterator1, iterator2, iterator3 ...)
+# returns a zip object, which is an iterator of tuples
+# where the first item in each passed iterator is paired together,
+# and then the second item in each passed iterator are paired together etc.
+#     a = ("John", "Charles", "Mike")
+#     b = ("Jenny", "Christy", "Monica")
+#     x = zip(a, b)  # (('John', 'Jenny'), ('Charles', 'Christy'), ('Mike', 'Monica'))
+
 #   'format'
-#   'filter'
 #   'slice'
-#   'reversed'
-#   'sorted'
-#   'zip'
