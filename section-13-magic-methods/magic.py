@@ -15,6 +15,7 @@
 
 # print(5 + "5")  # TypeError: unsupported operand type(s) for +: 'int' and 'str'
 # print("5" + 5)  # TypeError: can only concatenate str (not "int") to str
+
 int_num = 5
 float_num = 4.5
 
@@ -26,7 +27,6 @@ float_num = 4.5
 # print(dir(__builtins__))
 # https://docs.python.org/3/library/functions.html
 
-# [
 #   ------- Errors
 #   'ArithmeticError', 'AssertionError', 'AttributeError', 'BlockingIOError', 'BrokenPipeError', 'BufferError',
 #   'ChildProcessError', 'ConnectionAbortedError', 'ConnectionError', 'ConnectionRefusedError',
@@ -79,7 +79,28 @@ float_num = 4.5
 #     https://docs.python.org/3/library/codecs.html#standard-encodings
 #     https://docs.python.org/3/library/codecs.html#error-handlers
 
-#   'GeneratorExit', 'SystemExit', 'exit',
+# ----- bytearray
+#  It can convert objects into bytearray objects, or create empty bytearray object of the specified size.
+#  bytearray(source, encoding, error)
+# - Example
+# my_string = "Hello World"
+# my_bytes = bytearray(my_string, "utf-8")
+# print(chr(my_bytes[0]))
+# my_bytes[0] = ord('X')
+# new_string = my_bytes.decode("utf-8")
+# print(new_string)
+
+# ----- 'memoryview'
+# byte_array = bytearray('XYZ', 'utf-8')
+# mv = memoryview(byte_array)
+# print(mv[0])
+# print(bytes(mv[0:1]))
+# mv[2] = 74  # Change Z to J
+# print(byte_array)
+# bytes_mv = bytes(mv)  # memory view to bytes
+# str_mv = str(mv)  # memory view to str
+
+#   'GeneratorExit', 'SystemExit',
 #   'NotImplemented',
 #   'StopAsyncIteration', 'StopIteration',
 #   '__build_class__', '__debug__', '__doc__', '__import__', '__loader__', '__name__', '__package__', '__spec__',
@@ -91,11 +112,12 @@ float_num = 4.5
 #   'credits',
 #   'license',
 
-#   'type' return  type of an object in Python
+#   'type' return type of an object in Python
 
-#   'str',
+#   'str'  # (__str__) Used for creating user-friendly output and for displaying the object as a string
 #   'int',
 #   'float',
+#   'bool',
 #   'bool',
 #   'dict',
 #   'list',
@@ -104,6 +126,8 @@ float_num = 4.5
 #   'tuple',
 #   'map',
 #   'complex'  # complex(3, 5), complex('3+5j')
+
+#   'repr'  # (__repr__) Used for debugging and development purposes to get the complete information of an object
 
 #   'id'  # returns a unique id (the object's memory address) for the specified object
 #   'hash'  # returns an integer value for every object which is hashable (is used to quickly compare dictionary keys)
@@ -137,7 +161,8 @@ float_num = 4.5
 # https://docs.python.org/3/reference/expressions.html#await
 # https://docs.python.org/3/reference/compound_stmts.html#coroutines
 
-#   'sum', 'divmod', 'max', 'min', 'pow', 'round',
+# ----- Math buildins
+# 'sum', 'divmod', 'max', 'min', 'pow', 'round',
 
 #   'oct'  # The oct() returns an octal string from the given 'int' (binary, decimal or hexadecimal) number.
 #   'hex'  # converts an 'int' to the hexadecimal number in string form
@@ -152,27 +177,73 @@ float_num = 4.5
 #   'isinstance'  # returns True if the specified object is of the specified type - isinstance(object, type)
 #   'issubclass'  # returns True if the specified object is a subclass of the specified object - issubclass(object, subclass)
 
-#   'globals'  # returns a dictionary representing the current global symbol table
-#   'locals',  # returns the dictionary of the current local symbol table
+#   'super'  # returns proxy-object (temporary superclass object) for inheritance in classes
 
-#   'bytearray',
-#   'callable',
-#   'breakpoint',
-#   'compile',
-#   'enumerate',
-#   'eval',
-#   'exec',
-#   'format',
-#   'filter',
-#   'len',
-#   'memoryview',
-#   'open',
-#   'repr',
-#   'reversed',
-#   'slice',
-#   'sorted',
-#   'super',
-#   'vars',
+#   'globals'  # returns a dictionary representing the current global symbol table
+#   'locals'  # returns the dictionary of the current local symbol table
+#   'vars'  # vars(some_obj) | vars() argument must have __dict__ attribute
+
+# ----- 'callable'
+#   True, if the object appears to be callable.
+#   False, if the object is not callable.
+
+# ----- 'breakpoint' for debugging in console
+
+# ----- 'open'  # open(file, mode)
+#     "r" - Read - Default value. Opens a file for reading, error if the file does not exist
+#     "a" - Append - Opens a file for appending, creates the file if it does not exist
+#     "w" - Write - Opens a file for writing, creates the file if it does not exist
+#     "x" - Create - Creates the specified file, returns an error if the file exist
+#     "t" - Text - Default value. Text mode
+#     "b" - Binary - Binary mode (e.g. images)
+# https://www.w3schools.com/python/python_file_open.asp
+# https://www.w3schools.com/python/python_file_write.asp
+# https://www.w3schools.com/python/python_file_remove.asp
+
+# ----- 'compile'
+#  The code object returned by the compile() method can later be called
+#  using methods like: exec() and eval() which will execute dynamically generated Python code.
+#     f = open('main.py', 'r')
+#     temp = f.read()
+#     f.close()
+#     code = compile(temp, 'main.py', 'exec')
+#     # ... some logic
+#     exec(code)
+
+#   'eval'  # used to evaluate a single dynamically generated Python expression
+#   'exec'  # used to execute dynamically generated Python code only for its side effects
+
+# ----- 'enumerate'  # enumerate(iterable, start=0)
+# Returns an iterator with index and element pairs from the original iterable
+# letters = ['a', 'b', 'c', 'd', 'e', 'f']
+# enum_letters = enumerate(letters)  # enumerate(letters, 10)
+# print(next(enum_letters))  # (0, 'a')
+# print(list(enum_letters))  # [(1, 'b'), (2, 'c'), (3, 'd'), (4, 'e'), (5, 'f')]
+
+#   'len'  # len(some_list or string) function returns the number of items in an object.
+
+# ----- 'quit' - should not be used in production code!
+# It raises the SystemExit exception behind the scenes
+for i in range(10):
+    if i == 5:
+        print(quit)  # ---- quit
+        quit()
+    print(i)
+
+
+# ----- 'exit' -
+for i in range(10):
+    if i == 5:
+        print(exit)  # ---- exit
+        exit()
+    print(i)
+
+# ----- sys.exit([arg])  # arg - int or string
+# is considered as exit commands in python if good to be used in production code
+
+#   'format'
+#   'filter'
+#   'slice'
+#   'reversed'
+#   'sorted'
 #   'zip'
-#   'quit',
-# ]
