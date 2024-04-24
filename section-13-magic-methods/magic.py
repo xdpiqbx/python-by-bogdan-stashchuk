@@ -145,7 +145,9 @@ float_num = 4.5
 
 #   'print' & 'input',
 
-# ----- 'iter' & 'next',
+# ----- 'iter' - create an iterator object
+# 'reversed' - returns a reversed iterator object
+# 'next'
 # vowels = ["a", "e", "i", "o", "u"]
 # vowels_iter = iter(vowels)
 # print(next(vowels_iter))  # a
@@ -223,27 +225,70 @@ float_num = 4.5
 #   'len'  # len(some_list or string) function returns the number of items in an object.
 
 # ----- 'quit' - should not be used in production code!
+# This function should only be used in the interpreter
 # It raises the SystemExit exception behind the scenes
-for i in range(10):
-    if i == 5:
-        print(quit)  # ---- quit
-        quit()
-    print(i)
+# for i in range(10):
+#     if i == 5:
+#         print(quit)  # ---- Use quit() or Ctrl-Z plus Return to exit
+#         quit()
+#     print(i)
 
-
-# ----- 'exit' -
-for i in range(10):
-    if i == 5:
-        print(exit)  # ---- exit
-        exit()
-    print(i)
+# ----- 'exit' - It is like a synonym for quit() to make Python more user-friendly
+# This function should only be used in the interpreter
+# for i in range(10):
+#     if i == 5:
+#         print(exit)  # ---- Use exit() or Ctrl-Z plus Return to exit
+#         exit()
+#     print(i)
 
 # ----- sys.exit([arg])  # arg - int or string
 # is considered as exit commands in python if good to be used in production code
 
-#   'format'
-#   'filter'
-#   'slice'
-#   'reversed'
-#   'sorted'
-#   'zip'
+# sys.exit() is preferred mostly because the exit() and quit() functions cannot be used in production code
+# while os._exit() is for special cases only when the immediate exit is required
+
+# # ----- 'sorted' immutable
+# # sorted(iterable, [key=key], [reverse=reverse])
+# a = ("b", "g", "a", "d", "f", "c", "h", "e")
+# x = sorted(a)
+# print(x)
+#
+# a = ("aa", "cccc", "bbb")
+# # Make it ordered by len in reversed direction
+# x = sorted(a, key=len, reverse=True)  # ['cccc', 'bbb', 'aa']
+# print(x)
+#
+# # Sort the list by the number closest to 10:
+# # -- 1
+# # def myfunc(n):
+# #     return abs(10 - n)
+# # -- 2
+# # closest_10 = lambda n : abs(10 - n)
+# # -- 3
+# a = (5, 3, 1, 11, 2, 12, 17)
+# x = sorted(a, key=lambda n: abs(10 - n))
+# print(x)
+
+# ----- filter(function, iterable) - returns an iterator where the items are filtered through a function.
+# ages = [5, 12, 17, 18, 24, 32]
+# print(list(filter(lambda age: age >= 18, ages)))
+
+# ----- slice(start, end, step) - returns a slice object
+# Alternative for slice is - itertools.islice(iterable, start, stop[, step])
+# letters = ("a", "b", "c", "d", "e", "f", "g", "h")
+# # x = slice(1, 8, 3)  # ('b', 'e', 'h')
+# sliced_letters = slice(1, len(letters), 3)  # ('b', 'e', 'h')
+# print(letters[sliced_letters])
+
+# ----- zip(iterator1, iterator2, iterator3 ...)
+# letters = ("a", "b", "c")
+# numbers = (1, 2, 3, 4, 5)
+# zipped = list(zip(letters, numbers))
+# print(list(zipped))  # [('a', 1), ('b', 2), ('c', 3)]
+# ltrs, nums = zip(*zipped)
+# print(ltrs)
+# print(nums)
+
+# 'format'
+# https://docs.python.org/2/library/string.html#format-specification-mini-language
+# https://docs.python.org/2/library/string.html#format-specification-mini-language
