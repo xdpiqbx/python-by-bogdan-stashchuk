@@ -248,6 +248,7 @@
 # while os._exit() is for special cases only when the immediate exit is required
 
 # # ----- 'sorted' immutable
+# ----------------- https://docs.python.org/uk/3/howto/sorting.html#sortinghowto
 # # sorted(iterable, [key=key], [reverse=reverse])
 # a = ("b", "g", "a", "d", "f", "c", "h", "e")
 # x = sorted(a)
