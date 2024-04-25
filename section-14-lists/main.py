@@ -19,9 +19,9 @@
 # .pop([index]) remove+return element from end or by index
 # .sort(*, [key=None, reverse=False])  # MUTABLE!!! and return NONE
     # ----------------- https://docs.python.org/uk/3/howto/sorting.html#sortinghowto
-# .count(item)
+# .count(item)  # returns the number of elements with the specified value
 # .insert(index, item)  # insert item before index
-# .clear()
+# .clear() # Muttable! Return None/. List will be empty - []
 # .copy()
 # .extend(other_iterable)  # receives list or strind as param
 # .index()
