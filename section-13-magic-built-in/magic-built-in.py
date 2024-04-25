@@ -16,8 +16,8 @@
 # print(5 + "5")  # TypeError: unsupported operand type(s) for +: 'int' and 'str'
 # print("5" + 5)  # TypeError: can only concatenate str (not "int") to str
 
-int_num = 5
-float_num = 4.5
+# int_num = 5
+# float_num = 4.5
 
 # print(True + int_num)  # 6
 # print(int_num + True)  # 6 -> int_num.__add__(True)
@@ -85,10 +85,10 @@ float_num = 4.5
 # - Example
 # my_string = "Hello World"
 # my_bytes = bytearray(my_string, "utf-8")
-# print(chr(my_bytes[0]))
+# print(chr(my_bytes[0]))  # H
 # my_bytes[0] = ord('X')
 # new_string = my_bytes.decode("utf-8")
-# print(new_string)
+# print(new_string)  # Xello World
 
 # ----- 'memoryview'
 # byte_array = bytearray('XYZ', 'utf-8')
