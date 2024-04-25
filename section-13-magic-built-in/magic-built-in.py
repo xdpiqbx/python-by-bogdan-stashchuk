@@ -46,6 +46,11 @@
 
 #   'KeyboardInterrupt', 'None', 'False', 'True',
 
+#   'GeneratorExit', 'SystemExit',
+#   'NotImplemented',
+#   'StopAsyncIteration', 'StopIteration',
+#   '__build_class__', '__debug__', '__doc__', '__import__', '__loader__', '__name__', '__package__', '__spec__',
+
 # -------- 'ascii',
 #     print(ascii("Hello"))  # Hello
 #     test_str = "G ë ê k s f ? r G ? e k s"
@@ -90,20 +95,15 @@
 # new_string = my_bytes.decode("utf-8")
 # print(new_string)  # Xello World
 
-# ----- 'memoryview'
+# ----- 'memoryview' - allows Python code to access the internal data of an object's buffer without making a copy of it
 # byte_array = bytearray('XYZ', 'utf-8')
 # mv = memoryview(byte_array)
-# print(mv[0])
-# print(bytes(mv[0:1]))
+# print(mv[0])  # 88 (Y-89, Z-90)
+# print(bytes(mv[0:1]))  # b'X'
 # mv[2] = 74  # Change Z to J
-# print(byte_array)
+# print(byte_array)  # bytearray(b'XYJ')
 # bytes_mv = bytes(mv)  # memory view to bytes
 # str_mv = str(mv)  # memory view to str
-
-#   'GeneratorExit', 'SystemExit',
-#   'NotImplemented',
-#   'StopAsyncIteration', 'StopIteration',
-#   '__build_class__', '__debug__', '__doc__', '__import__', '__loader__', '__name__', '__package__', '__spec__',
 
 # ----- SERVICE functions
 #   'dir',
