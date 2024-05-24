@@ -1,4 +1,4 @@
-# https://www.udemy.com/course/python-ru/learn/lecture/35363376#overview
+# https://www.udemy.com/course/python-ru/learn/lecture/35363380#overview
 
 # print(dir(list))
 # '__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__',
