@@ -1,4 +1,7 @@
-# https://www.udemy.com/course/python-ru/learn/lecture/35363380#overview
+print(list.__doc__)
+# Built-in mutable sequence.
+# If no argument is given, the constructor creates a new empty list.
+# The argument must be an iterable if specified.
 
 # print(dir(list))
 # '__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__',
