@@ -1,3 +1,5 @@
+# https://www.udemy.com/course/python-ru/learn/lecture/35368590#content
+
 # range(start, stop, step)
 
 my_range = range(1, 15, 2)
