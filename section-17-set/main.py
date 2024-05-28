@@ -13,8 +13,8 @@ cars = {('type', 'Moto'), ('type', 'Car')}  # It's Ok!
 # del set_fruits1[0]  # 'set' object doesn't support item deletion
 # lists_set = {[1, 2], [3, 4], [5, 6]}  # unhashable type: 'list', 'dict', 'set'
 
-print(type(set_fruits1))  # <class 'set'>
-print(dir(set_fruits1))
+# print(type(set_fruits1))  # <class 'set'>
+# print(dir(set_fruits1))
 # ['__and__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__',
 # '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__iand__', '__init__', '__init_subclass__',
 # '__ior__', '__isub__', '__iter__', '__ixor__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__or__',
@@ -34,14 +34,15 @@ print(dir(set_fruits1))
 
 
 # intersection - '&'
-# {1, 2, 3}.intersection({1, 2, 4})  # {1, 2}
+print({1, 2, 3}.intersection({1, 2, 4}))  # {1, 2}
 # {1, 2, 3} & {1, 2, 4}  # {1, 2}
 
 # intersection_update
+print({1, 2, 3}.intersection_update({1, 2, 4}))  # None
 
 # difference - '-'
-# {1, 2, 3, 4}.difference({1, 2, 3})  # {4}
-# {1, 2, 3, 4} - {1, 2, 3}  # {4}
+# {1, 2, 3, 4}.difference({1, 2, 3, 5})  # {4}
+# {1, 2, 3, 4} - {1, 2, 3, 5}  # {4}
 
 # difference_update
 
