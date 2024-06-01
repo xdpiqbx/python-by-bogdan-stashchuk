@@ -12,10 +12,17 @@ print(my_range.start)
 print(my_range.stop)
 print(my_range.step)
 
-# print(dir(range))
 # ------------------------ Methods
+# print(dir(range))
 # .count(item) - 1 if el in range, otherwise 0
 # .index(4) - to get item index in range
 # start - readonly attribute
 # stop - readonly attribute
 # step - readonly attribute
+
+# ------------------------ Task
+range_to_10 = range(10)
+nums_from_range = list()
+for i in range_to_10:
+    nums_from_range.append(i)
+print(f"nums_from_range: {nums_from_range}")
