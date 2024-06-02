@@ -1,3 +1,4 @@
+# https://www.udemy.com/course/python-ru/learn/lecture/35368712#overview
 def name(n):
     print(n)
 

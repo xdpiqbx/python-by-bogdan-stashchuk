@@ -1,9 +1,8 @@
+# https://www.udemy.com/course/python-ru/learn/lecture/35368660#overview
 def sum_num1(a, b):  # a, b -> required positional args
     return a + b
 
-# -------------------
-
-
+# ------------------- * - syntax
 def sum_num2(a, *args, b):  # *args tulpe of args
     print(f"a={a}, args={args}, b={b}")
     return args[0] + args[1]
@@ -14,9 +13,7 @@ def sum_num2(a, *args, b):  # *args tulpe of args
 # Errors
 # sum_num2(1, 2, 3, 4) TypeError: sum_num2() missing 1 required keyword-only argument: 'b'
 
-# -------------------
-
-
+# ------------------- Keyword args
 def sum_num3(a, b):
     print(f"a={a} and b={b}")
     return b + a
