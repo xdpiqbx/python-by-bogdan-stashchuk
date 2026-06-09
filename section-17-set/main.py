@@ -34,7 +34,7 @@ cars = {('type', 'Moto'), ('type', 'Car')}  # It's Ok!
 
 
 # intersection - '&'
-print({1, 2, 3}.intersection({1, 2, 4}))  # {1, 2}
+# print({1, 2, 3}.intersection({1, 2, 4}))  # {1, 2}
 # {1, 2, 3} & {1, 2, 4}  # {1, 2}
 
 # intersection_update
@@ -45,6 +45,10 @@ print({1, 2, 3}.intersection_update({1, 2, 4}))  # None
 # {1, 2, 3, 4} - {1, 2, 3, 5}  # {4}
 
 # difference_update
+# set_from_one_to_ten = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+# print(set_from_one_to_ten)
+# set_from_one_to_ten.difference_update({2, 4, 6}, {1, 5, 9})
+# print(set_from_one_to_ten)  # {3, 7, 8, 10}
 
 # symmetric_difference
 # {1, 2, 3}.symmetric_difference({1, 2, 4}) -> {3, 4}

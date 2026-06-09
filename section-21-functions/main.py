@@ -1,3 +1,4 @@
+#  https://www.udemy.com/course/python-ru/learn/lecture/35368642#overview
 def empty():
     pass
 
@@ -5,6 +6,8 @@ def empty():
 def hello():
     print("Hello")
 
+
+# print(type(hello))  # <class 'function'>
 
 # print(dir(hello))
 # --------------------------- Magic
