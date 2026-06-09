@@ -58,14 +58,16 @@ book["title"] = "Sword"
 book["author"] = "Bill"
 book["is_new"] = True
 print(id(book))
-print(book.items())  # dict_items([('title', 'Sword'), ('author', 'Bill'), ('is_new', True)])
+# dict_items([('title', 'Sword'), ('author', 'Bill'), ('is_new', True)])
+print(book.items())
 print(book.keys())  # dict_keys(['title', 'author', 'is_new'])
 print(book.values())  # dict_values(['Sword', 'Bill', True])
 print(book.fromkeys([1, 2, 3]))  # {1: None, 2: None, 3: None}
-print(book.get("title", "Default value"))  # Sword / None if not exists or Default value
+# Sword / None if not exists or Default value
+print(book.get("title", "Default value"))
 print(book.pop("is_new"))  # return+remove by key
 print(book["title"])  # Sword
-# print(book.popitem())  # ('author', 'Bill') was removed and returned
+# print(book.popitem())  # ('author', 'Bill') was removed last item and returned
 del (book["author"])
 
 # ----------------------------- Copy
